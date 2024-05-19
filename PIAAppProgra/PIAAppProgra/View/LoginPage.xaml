@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PIAAppProgra.LoginPage"
+             BackgroundColor="#8e44ad"
+             NavigationPage.HasNavigationBar="False">
+    
+    <ContentPage.Content>
+        <ScrollView>
+
+            <StackLayout Padding="40"  VerticalOptions="FillAndExpand">
+
+                <Image Source="https://i.postimg.cc/RVr37mdm/facil.png" HeightRequest="180" Aspect="AspectFit" HorizontalOptions="Center" VerticalOptions="Start"></Image>
+                <Label/>
+                <Label/>
+
+
+                <Entry x:Name="CorreoUsuario" Text="{Binding CorreoUsuario}" Placeholder="Correo" TextColor="White" PlaceholderColor="#bdc3c7"></Entry>
+                <Entry x:Name="ContraUsuario" Text="{Binding ContraUsuario}" Placeholder="Contraseña" IsPassword="True" TextColor="White" PlaceholderColor="#bdc3c7"></Entry>
+
+                <Button x:Name="LoginBoton" 
+                        VerticalOptions="Center"
+                        Text="Iniciar Sesión"
+                        TextColor="#8e44ad"
+                        BackgroundColor="#ecf0f1"
+                        BorderWidth="1.5"
+                        CornerRadius="50"
+                        BorderColor="Black"
+                        Command="{Binding LoginCommand}"></Button>
+
+                <Label HorizontalOptions="Center">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Aun no tienes cuenta?     " TextColor="#bdc3c7"/>
+                            <Span Text="Registrate Aquí" TextColor="#bdc3c7" FontAttributes="Bold" TextDecorations="Underline"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                    </Label.GestureRecognizers>
+                </Label>
+                
+                <Label/>
+                
+                <Label HorizontalOptions="Center">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Olvidaste tu contraseña?     " TextColor="#bdc3c7"/>
+                            <Span Text="Aqui" TextColor="#bdc3c7" FontAttributes="Bold" TextDecorations="Underline"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1"/>
+                    </Label.GestureRecognizers>
+                </Label>
+
+            </StackLayout>
+
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

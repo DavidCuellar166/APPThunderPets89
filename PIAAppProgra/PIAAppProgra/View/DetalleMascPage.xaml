@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PIAAppProgra.View.DetalleMascPage"
+             NavigationPage.HasNavigationBar="False">
+    <ScrollView>
+        <Grid>
+            <Grid.Background>
+                <LinearGradientBrush StartPoint="1,0">
+                    <GradientStop Color="#ecf0f1" Offset="0.1"/>
+                    <GradientStop Color="#9b59b6" Offset="0.8"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+
+            <StackLayout Margin="10,0,10,0">
+                <Image Source="https://i.postimg.cc/vB1JvgdH/anterior.png" HeightRequest="50" HorizontalOptions="Start" Margin="10,20,0,0">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding Volvercommand}"/>
+                    </Image.GestureRecognizers>
+                </Image>
+
+                <Grid RowDefinitions="100,*"  Margin="10,45,20,-30">
+
+                    <Frame Grid.Row="2" WidthRequest="250" HorizontalOptions="Center" CornerRadius="15" Margin="10,-90,10,15" BackgroundColor="White" BorderColor="Black" >
+                        <StackLayout Margin="10,15,10,0">
+
+                            <Label x:Name="LblNomMascD" Text="{Binding parametrosRecibe.NomMasc}" TextColor="Black" FontSize="40" HorizontalTextAlignment="Center"/>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="Sexo:" FontSize="20" TextColor="#9b59b6" FontAttributes="Bold"/>
+                                <Label x:Name="LblTelDueMasc" Text="{Binding parametrosRecibe.SexoMasc}" TextColor="Black" FontSize="15" TextDecorations="Underline" VerticalOptions="Center"/>
+                            </StackLayout>
+                            
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="Ublicación:" FontSize="20" TextColor="#9b59b6" FontAttributes="Bold"/>
+                                <Label x:Name="LblUbiMasc" Text="{Binding parametrosRecibe.UbiMasc}" TextColor="Black" FontSize="15" TextDecorations="Underline" VerticalOptions="Center"/>
+                            </StackLayout>
+                            
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="Dueño:" FontSize="20" TextColor="#9b59b6" FontAttributes="Bold"/>
+                                <Label x:Name="LblNomDueD" Text="{Binding parametrosRecibe.NomDue}" TextColor="Black" FontSize="15" TextDecorations="Underline" VerticalOptions="Center"/>
+                            </StackLayout>
+                            
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="Situación:" FontSize="20" TextColor="#9b59b6" FontAttributes="Bold"/>
+                                <Label x:Name="LblDescMasc" Text="{Binding parametrosRecibe.DescMas}" TextColor="Black" FontSize="15" TextDecorations="Underline" VerticalOptions="Center"/>
+                            </StackLayout>
+
+                            <Label/>
+                        </StackLayout> 
+                    </Frame>
+
+                    <Image x:Name="RecImagenRM" Source="{Binding parametrosRecibe.ImaMasc}" Grid.RowSpan="2" HeightRequest="180" VerticalOptions="StartAndExpand" Scale="1.5" Margin="0,10,0,0"/>
+
+                </Grid>
+
+                
+                <Grid>
+                    <StackLayout Margin="10,0,10,30" Grid.Row="1">
+                        <Button x:Name="BtnDWhtsap" ImageSource="https://i.postimg.cc/yd9fdFH9/aplicacion.png" Text="Contacto" HeightRequest="65" BorderColor="Black" BackgroundColor="#ecf0f1" TextColor="#9b59b6" CornerRadius="30" FontAttributes="Bold" BorderWidth="1.3" Clicked="BtnDWhtsap_Clicked"/>
+                        <Label x:Name="LblTelNueConta" Text="{Binding parametrosRecibe.TelDue}" FontSize="25" FontAttributes="Bold" TextColor="White" VerticalOptions="Center" IsVisible="False"/>
+                    </StackLayout>
+                </Grid>
+
+            </StackLayout>
+        </Grid>
+
+    </ScrollView>
+
+</ContentPage>

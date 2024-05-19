@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PIAAppProgra.View.RegistrarMascota"
+             NavigationPage.HasNavigationBar="False"
+             Title="Mascota"
+             IconImageSource="https://i.postimg.cc/QNmQq60C/huella.png">
+    <ScrollView>
+        <Grid RowDefinitions="60,*"
+                  BackgroundColor="White">
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Image Source="https://i.postimg.cc/Pq6gnbMM/Nom-Marca-YLogo.png" HorizontalOptions="Center" VerticalOptions="Center"/>
+            </StackLayout>
+            <StackLayout Grid.Row="1" Padding="20" VerticalOptions="FillAndExpand" BackgroundColor="#ecf0f1">
+
+                <ProgressBar x:Name="BarraDeCargaFotoMascRegistro" ProgressColor="#9b59b6"/>
+
+                <Button x:Name="BtnCargarImaMasRegistro" 
+                        Clicked="BtnCargarImaMasRegistro_Clicked"
+                        VerticalOptions="Center"
+                        Text="Cargar Imagen de su Mascota"
+                        TextColor="#ecf0f1"
+                        BackgroundColor="#8e44ad"
+                        BorderWidth="1.5"
+                        CornerRadius="50"
+                        BorderColor="Black"></Button>
+
+                <Label></Label>
+
+                <Label x:Name="LinkDeCargaFMascRegistro" IsVisible="False"/>
+                <Entry Text="" x:Name="MostrarLinkDeLaImagenMasc" FontSize="25" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" IsVisible="False"/>
+                <Button Text="Obtener vinculo" 
+                        x:Name="BtnObtLikImgMascRegistro" 
+                        BackgroundColor="#ecf0f1"
+                        TextColor="#8e44ad"
+                        BorderWidth="1.5"
+                        CornerRadius="50"
+                        BorderColor="Black"
+                        Clicked="BtnObtLikImgMascRegistro_Clicked"
+                        IsEnabled="False"/>
+
+                <Entry Placeholder="Nombre de la Mascota" x:Name="NomMascRegistro" Text="{Binding NomMascTxt}" TextColor="#9b59b6" PlaceholderColor="Black" IsEnabled="False"></Entry>
+                <Entry Placeholder="Sexo de la Mascota" x:Name="SexoMascRegistro" Text="{Binding SexoMascTxt}" TextColor="#9b59b6" PlaceholderColor="Black" IsEnabled="False"></Entry>
+                <Entry Placeholder="Ubicación de la Mascota" x:Name="UbiMascRegistro" Text="{Binding UbiMascTxt}" TextColor="#9b59b6" PlaceholderColor="Black" IsEnabled="False"></Entry>
+                <Entry Placeholder="Razón de Adopción" x:Name="DescMascRegistro" Text="{Binding DescMascTxt}" TextColor="#9b59b6" PlaceholderColor="Black" IsEnabled="False"></Entry>
+                <Entry Placeholder="Nombre del Dueño" x:Name="NomDueRegistro" Text="{Binding NomDueTxt}" TextColor="#9b59b6" PlaceholderColor="Black" IsEnabled="False"></Entry>
+                <Entry Placeholder="Teléfono del Dueño" x:Name="TelDueRegistro" Text="{Binding TelDueTxt}" TextColor="#9b59b6" PlaceholderColor="Black" IsEnabled="False" Keyboard="Numeric"></Entry>
+                <Entry Text="{Binding ImagenMascTxt}" x:Name="ImagenMascRegi" FontSize="25" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="#9b59b6" PlaceholderColor="#bdc3c7" IsVisible="False"/>
+
+                <Button Command="{Binding InsertarMascCommand}"
+                            Text="Publicar" 
+                            x:Name="RegistrarNuevoUsuario" 
+                            TextColor="#ecf0f1"
+                            BackgroundColor="#8e44ad"
+                            BorderWidth="1.5"
+                            CornerRadius="50"
+                            BorderColor="Black"
+                            FontAttributes="Bold"
+                            IsVisible="False"></Button>
+                <Label Padding="1,0,0,0"/>
+
+                <Button Text="Vista Previa"
+                        TextColor="#8e44ad"
+                        BorderWidth="1.5"
+                        CornerRadius="50"
+                        BorderColor="Black"
+                        FontAttributes="Bold"
+                        Padding="10"
+                        x:Name="BotonVistapreviaRM"
+                        Clicked="BotonVistapreviaRM_Clicked"
+                        ImageSource="https://i.postimg.cc/63LdgzKH/ver.png"
+                        HeightRequest="50"
+                        WidthRequest="100"
+                        BackgroundColor="#ecf0f1"></Button>
+                
+                <Button Text="Vista Previa"
+                        TextColor="#8e44ad"
+                        BorderWidth="1.5"
+                        CornerRadius="50"
+                        BorderColor="Black"
+                        FontAttributes="Bold"
+                        Padding="10"
+                        x:Name="BotonQUITARVistapreviaRM"
+                        Clicked="BotonQUITARVistapreviaRM_Clicked"
+                        ImageSource="https://i.postimg.cc/3xdFNgjR/esconder.png"
+                        HeightRequest="50"
+                        WidthRequest="100"
+                        BackgroundColor="#ecf0f1"
+                        IsVisible="False"></Button>
+
+
+                <Grid RowDefinitions="100,*"
+                      Margin="0,40,0,0"
+                      x:Name="VistaPreviaMasc"
+                      IsVisible="False">
+
+                    <Frame Grid.Row="1" WidthRequest="250" HorizontalOptions="Center" CornerRadius="15" Margin="0,-38,0,0" BackgroundColor="White">
+                        <StackLayout Margin="0,90,0,0">
+                            <Label/>
+                            <Label x:Name="LabelNombreRM" TextColor="Black" FontSize="30"/>
+                            <Button Text=""
+                                    x:Name="BtnSexoRM"
+                                    CornerRadius="30"
+                                    HorizontalOptions="Start"
+                                    TextTransform="None"
+                                    HeightRequest="40"
+                                    BackgroundColor="#9b59b6"
+                                    TextColor="#ecf0f1"/>
+                        </StackLayout>
+                    </Frame>
+                    
+                    <Image x:Name="RecImagenRM" Source="" Grid.RowSpan="2" HeightRequest="180" VerticalOptions="StartAndExpand" Scale="1"/>
+                </Grid>
+            </StackLayout>
+        </Grid>
+
+
+
+    </ScrollView>
+    
+</ContentPage>

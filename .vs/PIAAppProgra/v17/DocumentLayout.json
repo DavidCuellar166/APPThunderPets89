@@ -1,0 +1,62 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\PC\\Downloads\\PIAAppProgra\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E1C7FC0A-A19D-40CB-BCE5-A00A428DB5B9}|PIAAppProgra\\PIAAppProgra\\PIAAppProgra.csproj|c:\\users\\pc\\downloads\\piaappprogra\\piaappprogra\\piaappprogra\\view\\registrerpage.xaml||{2974C621-7033-421A-B08A-11D27B021D1B}",
+      "RelativeMoniker": "D:0:0:{E1C7FC0A-A19D-40CB-BCE5-A00A428DB5B9}|PIAAppProgra\\PIAAppProgra\\PIAAppProgra.csproj|solutionrelative:piaappprogra\\piaappprogra\\view\\registrerpage.xaml||{2974C621-7033-421A-B08A-11D27B021D1B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1C7FC0A-A19D-40CB-BCE5-A00A428DB5B9}|PIAAppProgra\\PIAAppProgra\\PIAAppProgra.csproj|c:\\users\\pc\\downloads\\piaappprogra\\piaappprogra\\piaappprogra\\view\\registrerpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1C7FC0A-A19D-40CB-BCE5-A00A428DB5B9}|PIAAppProgra\\PIAAppProgra\\PIAAppProgra.csproj|solutionrelative:piaappprogra\\piaappprogra\\view\\registrerpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e506b91c-c606-466a-90a9-123d1d1e12b3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "RegistrerPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Downloads\\PIAAppProgra\\PIAAppProgra\\PIAAppProgra\\View\\RegistrerPage.xaml.cs",
+              "RelativeDocumentMoniker": "PIAAppProgra\\PIAAppProgra\\View\\RegistrerPage.xaml.cs",
+              "ToolTip": "C:\\Users\\PC\\Downloads\\PIAAppProgra\\PIAAppProgra\\PIAAppProgra\\View\\RegistrerPage.xaml.cs",
+              "RelativeToolTip": "PIAAppProgra\\PIAAppProgra\\View\\RegistrerPage.xaml.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAAcwCYAAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-14T02:57:24.122Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "RegistrerPage.xaml",
+              "DocumentMoniker": "C:\\Users\\PC\\Downloads\\PIAAppProgra\\PIAAppProgra\\PIAAppProgra\\View\\RegistrerPage.xaml",
+              "RelativeDocumentMoniker": "PIAAppProgra\\PIAAppProgra\\View\\RegistrerPage.xaml",
+              "ToolTip": "C:\\Users\\PC\\Downloads\\PIAAppProgra\\PIAAppProgra\\PIAAppProgra\\View\\RegistrerPage.xaml",
+              "RelativeToolTip": "PIAAppProgra\\PIAAppProgra\\View\\RegistrerPage.xaml",
+              "ViewState": "AQIAADYAAAAAAAAAAAAAADcAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-05-14T02:57:23.245Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

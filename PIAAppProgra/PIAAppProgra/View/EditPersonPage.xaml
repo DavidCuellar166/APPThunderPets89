@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PIAAppProgra.View.EditPersonPage">
+    <ContentPage.Content>
+        <ScrollView >
+            <StackLayout Padding="40" VerticalOptions="FillAndExpand" BackgroundColor="#bdc3c7">
+                
+                <Image Source="http://imgfz.com/i/5lpbTGy.png" HeightRequest="150" Aspect="AspectFit" HorizontalOptions="Center" VerticalOptions="Start"></Image>
+                <Label></Label>
+
+                <Label Text="" x:Name="LabelDatoIdUsuario"/>
+
+                <ProgressBar x:Name="BarraDeCargaUPDATE" />
+
+                <Button Text="Actualizar Foto" x:Name="CargarImagenUsuarioUPDATE" Clicked="CargarImagenUsuarioUPDATE_Clicked" 
+                        TextColor="#ecf0f1" BackgroundColor="#8e44ad"
+                        BorderWidth="1.5" CornerRadius="50" BorderColor="Black" FontAttributes="Bold"/>
+
+
+                <Label x:Name="LinkDeCargaFPUsuaUPDATE" IsVisible="False"/>
+                <Entry Text="" x:Name="MostrarLinkDelaimagenUPDATE" FontSize="25" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" IsVisible="False"/>
+                <Label/>
+                <Button Text="Obtener Vinculo" x:Name="PasarLinkImagenACargaUPDATE" Clicked="PasarLinkImagenACargaUPDATE_Clicked" 
+                        BackgroundColor="#ecf0f1" TextColor="#8e44ad" BorderWidth="1.5"
+                        CornerRadius="50" BorderColor="Black" FontAttributes="Bold" IsEnabled="False"/>
+                <Label/>
+
+                <Label Text="Actualizar DATOS" TextColor="Black" FontSize="20" HorizontalOptions="Center"/>
+                <Entry Text="{Binding NombreUPTxt}"  TextColor="Black" x:Name="LabelNameEPP" IsEnabled="False"/>
+                <Entry Text="{Binding TelUPTxt}"   TextColor="Black" x:Name="LabelTelEPP" IsEnabled="False"/>
+                <Entry Text="{Binding EmailUPTxt}" TextColor="Black" IsVisible="False"/>
+                <Entry Text="{Binding ImaPerUPTxt}"  x:Name="ImagenNuevaUPdate" TextColor="Black" IsVisible="False"/>
+
+
+                <StackLayout  VerticalOptions="Center">
+                    <Button Text="Actualizar" Command="{Binding UpdateCommand}" WidthRequest="110" 
+                            BackgroundColor="#8e44ad" TextColor="#ecf0f1" BorderWidth="1.5"
+                            CornerRadius="50" BorderColor="Black" FontAttributes="Bold" IsEnabled="False" x:Name="BtnActualizarEPP" />
+                </StackLayout>
+
+            </StackLayout>
+
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

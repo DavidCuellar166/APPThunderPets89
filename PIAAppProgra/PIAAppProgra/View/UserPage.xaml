@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+    <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PIAAppProgra.View.UserPage"
+             NavigationPage.HasNavigationBar="False"
+             Title="Perfil"
+             IconImageSource="https://i.postimg.cc/264wmrQ7/usuario-1.png">
+
+    <ContentPage.Content>
+
+        <StackLayout>
+            <Image Source="https://i.postimg.cc/Pq6gnbMM/Nom-Marca-YLogo.png" HeightRequest="60" HorizontalOptions="Center" VerticalOptions="Center"/>
+            <StackLayout BackgroundColor="#ecf0f1">
+                <ListView ItemsSource="{Binding ListViewSource}" HasUnevenRows="True" x:Name="ListViewName" ItemSelected="ListViewName_ItemSelected">
+
+                    <ListView.ItemTemplate>
+                        <DataTemplate  >
+                            <ViewCell>
+                                <Grid RowDefinitions="100,*"  Margin="10,10,10,-10">
+                                    <Frame Grid.Row="2" WidthRequest="250" HorizontalOptions="Center" CornerRadius="15" Margin="10,-120,10,20" BackgroundColor="#8c7ae6" >
+                                        <StackLayout Margin="5,70,5,65">
+                                            <Label x:Name="LabelNombreRM" Text="{Binding Nombre}" TextColor="#f5f6fa" FontSize="25"/>
+                                            <StackLayout Orientation="Horizontal">
+                                                <Label Text="Celular:" FontSize="20" TextColor="#e1b12c" FontAttributes="Bold"/>
+                                                <Label x:Name="LabelRdeAdop" Text="{Binding Telefono}" TextColor="#f5f6fa" FontSize="17" TextDecorations="Underline" FontAttributes="Bold" VerticalOptions="Center"/>
+                                            </StackLayout>
+                                            <Button Text="{Binding Email}" x:Name="BtnemailM" CornerRadius="30" HorizontalOptions="End"
+                                            TextTransform="None" HeightRequest="40" BackgroundColor="#e1b12c" TextColor="#ecf0f1"/>
+                                        </StackLayout>
+                                    </Frame>
+
+                                    <Image x:Name="RecImagenRM" Source="{Binding ImagenPerfil}" Grid.RowSpan="2" HeightRequest="180" VerticalOptions="StartAndExpand" Scale="1" Margin="10,80,10,10"/>
+                                </Grid>
+
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+
+
+            <StackLayout>
+
+
+                <StackLayout HorizontalOptions = "Center" Orientation="Vertical" Margin="10,10,10,10" >
+                    <Button
+                     Text = "Cerrar Sesión" TextColor="#ecf0f1" Font="Montserrat-Medium.otf" BackgroundColor="#8e44ad"
+                     BorderColor="Black" BorderWidth="1.5" CornerRadius="50" WidthRequest="300" HeightRequest="50" x:Name="CerrarSUP" Clicked="CerrarSUP_Clicked"
+                    />
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+    </ContentPage>

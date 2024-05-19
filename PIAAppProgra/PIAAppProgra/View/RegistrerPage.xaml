@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PIAAppProgra.RegistrerPage"
+             BackgroundColor="#bdc3c7"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <ScrollView>
+
+            <StackLayout Padding="40" VerticalOptions="FillAndExpand">
+
+                <Image Source="https://i.postimg.cc/RVr37mdm/facil.png" HeightRequest="150" Aspect="AspectFit" HorizontalOptions="Center"></Image>
+                <Label></Label>
+
+                <ProgressBar x:Name="BarraDeCargaSFRegister" ProgressColor="#9b59b6"/>
+                
+                <Button x:Name="BtnCargarImaPerRegister" 
+                        Clicked="BtnCargarImaPerRegister_Clicked"
+                        VerticalOptions="Center"
+                        Text="Cargar Imagen de Perfil"
+                        TextColor="#bdc3c7"
+                        BackgroundColor="#8e44ad"
+                        BorderWidth="1.5"
+                        CornerRadius="50"
+                        BorderColor="Black"></Button>
+
+                <Label></Label>
+
+                <Label x:Name="LinkDeCargaFPUsua" IsVisible="False"/>
+                <Entry Text="" x:Name="MostrarLinkDelaimagen" FontSize="25" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" IsVisible="False"/>
+                <Button Text="Obtener vinculo" 
+                        x:Name="BtnObtLikImgPerfRegister" 
+                        BackgroundColor="#bdc3c7"
+                        TextColor="#8e44ad"
+                        BorderWidth="1.5"
+                        CornerRadius="50"
+                        BorderColor="Black"
+                        Clicked="BtnObtLikImgPerfRegister_Clicked"
+                        IsEnabled="False"/>
+
+                <Entry Placeholder="Correo Electronico" x:Name="CorreoNUsuario" Text="{Binding EmailTxt}" TextColor="#9b59b6" PlaceholderColor="#8e44ad" IsEnabled="False"></Entry>
+                <Entry Placeholder="Contraseña" x:Name="ContraNUsuario" Text="{Binding PasswordTxt}" TextColor="#9b59b6" PlaceholderColor="#8e44ad" IsPassword="True" IsEnabled="False"></Entry>
+                <Entry Placeholder="Nombre" x:Name="NombreNuSUsuario" Text="{Binding NombreUTxt}" TextColor="#9b59b6" PlaceholderColor="#8e44ad" IsEnabled="False"></Entry>
+                <Entry Placeholder="Telefono" x:Name="TelefonoNUsuario" Text="{Binding TelefonoUTxt}" TextColor="#9b59b6" PlaceholderColor="#8e44ad" IsEnabled="False" Keyboard="Numeric"></Entry>
+                <Entry Text="{Binding ImagenPerfilTxt}" x:Name="ImagenPerfil" FontSize="25" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="#9b59b6" PlaceholderColor="#8e44ad" IsVisible="False"/>
+
+                <Button Command="{Binding RegisterCommand}"
+                        Text="Registrarse" 
+                        x:Name="RegistrarNuevoUsuario" 
+                        TextColor="#bdc3c7"
+                        BackgroundColor="#8e44ad"
+                        BorderWidth="1.5"
+                        CornerRadius="50"
+                        BorderColor="Black"
+                        FontAttributes="Bold"
+                        IsVisible="False"></Button>
+
+                <Label HorizontalOptions="Center">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Ya tienes tu cuenta?               " TextColor="#9b59b6"/>
+                            <Span Text="Volver" TextColor="#9b59b6" FontAttributes="Bold" TextDecorations="Underline"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                    </Label.GestureRecognizers>
+                </Label>
+            </StackLayout>
+
+        </ScrollView>
+        
+    </ContentPage.Content>
+</ContentPage>

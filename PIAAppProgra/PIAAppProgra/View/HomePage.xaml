@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PIAAppProgra.HomePage"
+             NavigationPage.HasNavigationBar="False"
+             Title="Inicio"
+             IconImageSource="https://i.postimg.cc/8zNsnDcV/pagina-de-inicio.png">
+
+    
+    
+    <Grid RowDefinitions="60,*" BackgroundColor="#F5F6F6" x:Name="GridMascotas">
+
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Grid.Row="0">
+            <Image Source="https://i.postimg.cc/Pq6gnbMM/Nom-Marca-YLogo.png" HorizontalOptions="Center" VerticalOptions="Center"/>
+        </StackLayout>
+
+        <CollectionView BackgroundColor = "#8e44ad" Grid.Row="1" ItemsSource ="{Binding ListaPets}" Margin="0,0,0,0" x:Name="lista" >
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid RowDefinitions="100,*"  Margin="10,45,20,-30" x:Name="VistaPreviaMasc">
+
+                        <Frame Grid.Row="2" WidthRequest="250" HorizontalOptions="Center" CornerRadius="15" Margin="10,-90,10,15" BackgroundColor="White" BorderColor="Black" > 
+                            <StackLayout Margin="10,10,10,0">
+
+                                <Label x:Name="LabelNombreRM" Text="{Binding NomMasc}" TextColor="Black" FontSize="30"/>
+                                <Label x:Name="LabelTelDueRM" Text="{Binding TelDue}" TextColor="Black" IsVisible="False"/>
+                                <Label x:Name="LabelUbiMascRM" Text="{Binding UbiMasc}" TextColor="Black" IsVisible="False"/>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Dueño:" FontSize="20" TextColor="#9b59b6" FontAttributes="Bold"/>
+                                    <Label x:Name="LabelRdeAdop" Text="{Binding NomDue}" TextColor="Black" FontSize="15" TextDecorations="Underline" VerticalOptions="Center"/>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Situación:" FontSize="20" TextColor="#9b59b6" FontAttributes="Bold"/>
+                                    <Label x:Name="labeldesmasac" Text="{Binding DescMas}" TextColor="Black" FontSize="15" TextDecorations="Underline" VerticalOptions="Center"/>
+                                </StackLayout>
+                                <Button Text="{Binding SexoMasc}"
+                                x:Name="BtnSexoRM"
+                                CornerRadius="30"
+                                HorizontalOptions="End"
+                                TextTransform="None"
+                                HeightRequest="40"
+                                BorderWidth="1.3"
+                                BorderColor="Black"
+                                BackgroundColor="#fbc531"
+                                TextColor="#f5f6fa"
+                                Command="{Binding Path=BindingContext.IrDetalleMascCommand, Source={x:Reference lista}}" CommandParameter="{Binding .}"/>
+                                
+                            </StackLayout>
+                        </Frame>
+
+                        <Image x:Name="RecImagenRM" Source="{Binding ImaMasc}" Grid.RowSpan="2" HeightRequest="180" VerticalOptions="StartAndExpand" Scale="1" Margin="0,10,0,0"/>
+                        <Grid.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding Path=BindingContext.IrDetalleMascCommand, Source={x:Reference lista}}" CommandParameter="{Binding .}"/>
+                        </Grid.GestureRecognizers>
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+
+        </CollectionView>
+    </Grid>
+
+</ContentPage>
